@@ -1,0 +1,213 @@
+/* 
+blueGray: {
+    400: #94A3B8
+    500: #64748B
+    700: #334155
+    800: #1E293B 
+}
+colorTeal: {
+    400: #2DD4BF
+    500: #14B8A6
+    600: #0D9488
+}
+*/
+
+:root {
+    --brand: #2DD4BF;
+    --darkest: #1E293B;
+    --dark: #334155;
+    --dark-light: #64748B;
+    --dark-highlight: #F1F5F9;
+    --green-dark: #0D9488;
+    --green: #14B8A6;
+    --green-light: #2DD4BF;
+    --danger: #EF4444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F8FAFC;
+    font-family: 'Roboto', serif;
+    color: var(--dark-light);
+}
+
+h1,h2,h3,h4 {
+    color: var(--dark);
+}
+
+h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    background-color: var(--darkest);
+    padding: 2rem 0 10rem;
+    text-align: center;
+}
+
+.success {
+    color: var(--green);
+}
+
+.danger {
+    color: var(--danger);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.svg-circle {
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 1px solid;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.svg-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.svg-icon-money {
+    width: 2rem;
+    height: 2rem;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+#logo {
+    color: white;
+}
+
+#logo b {
+    color: var(--brand);
+}
+
+#balance {
+    margin: -3.5rem 1rem 0 1rem;
+}
+
+#balance h2 {
+    margin-top: 0;
+    color: white;
+}
+
+.card {
+    background-color: white;
+    padding: 1.5rem;
+    box-shadow: 0 3px 6px rgba(30, 41, 59, .1);
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.card h3 {
+    font-size: .875rem;
+    line-height: 1.5rem;    
+    color: var(--dark-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card p {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.card.total {
+    background-color: var(--green);
+}
+
+.card.total h3,
+.card.total p {
+    color: white;
+} 
+
+#transaction {
+    margin: 1.5rem 1rem;
+}
+
+#data-table {
+    width: 100%;
+    border-spacing: 0;
+    border-radius: 5px;
+    box-shadow: 0 0px 8px rgba(30, 41, 59, .1);
+    overflow: hidden;
+}
+
+table thead {
+    background-color:var(--dark-highlight);
+}
+
+table th {
+    padding: .875rem;
+    text-align: left;
+    font-size: .9rem;
+}
+
+table td {
+    background-color: white;
+    padding: .875rem;
+    font-size: 0.875rem;
+    border-bottom: 1px solid var(--dark-highlight);
+    color: #94A3B8;    
+}
+
+td.expense {
+    color: var(--danger);
+}
+
+td.income {
+    color: var(--green);
+}
+
+table tbody tr:hover {
+    opacity: .7;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 6rem;
+    color: #94A3B8;
+    position: absolute;
+    bottom: 25px;
+}
+
+@media (min-width: 768px) {
+    #balance {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
