@@ -27,7 +27,7 @@
                         </svg>
                     </div>
                 </h3>
-                <p>R$ 5.000,00</p>
+                <p id="incomeDisplay">R$ 5.000,00</p>
             </div>
     
             <div class="card">
@@ -39,7 +39,7 @@
                         </svg>
                     </div>
                 </h3>
-                <p>R$ 2.000,00</p>
+                <p id="expenseDisplay">R$ 2.000,00</p>
             </div>
     
             <div class="card total">
@@ -49,14 +49,14 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                 </h3>
-                <p>R$ 3.000,00</p>
+                <p id="totalDisplay">R$ 3.000,00</p>
             </div>            
         </section>
 
         <section id="transaction">
             <h2 class="sr-only">Transações</h2>
 
-            <a href="#" onclick="Modal.open()" class="button new">+ Nova Transação</a>
+            <a href="#" onclick="Modal.activeModal()" class="button new">+ Nova Transação</a>
 
             <table id="data-table">
                 <thead>
@@ -68,42 +68,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="description">Luz</td>
-                        <td class="expense">- R$ 500,00</td>
-                        <td class="date">23/01/2021</td>
-                        <td>
-                            <button type="button">
-                                <svg class="svg-icon danger" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="description">Criação de Site</td>
-                        <td class="income">R$ 1.800,00</td>
-                        <td class="date">23/01/2021</td>
-                        <td>
-                            <button type="button">
-                                <svg class="svg-icon danger" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="description">Internet</td>
-                        <td class="expense">- R$ 386,00</td>
-                        <td class="date">23/01/2021</td>
-                        <td>
-                            <button type="button">
-                                <svg class="svg-icon danger" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </button>
-                        </td>
-                    </tr>
+                   
                 </tbody>
             </table>
 
@@ -131,7 +96,7 @@
                             <input type="date" id="date" name="date" placeholder="Data">
                         </div>
                         <div class="input-group actions">
-                            <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
+                            <a href="#" onclick="Modal.activeModal()" class="button cancel">Cancelar</a>
                             <button class="button success">Salvar</button>
                         </div>
                     </form>
